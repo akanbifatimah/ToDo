@@ -43,3 +43,15 @@ npm test
 - **CSS**: Ensure that styles for error messages (`error` class) are correctly applied for visibility.
 - **Functionality**: Validate the functionality of adding, marking as completed, and removing todos in conjunction with fetched data.
 
+## Branching Strategy
+Git Flow
+- Git Flow is a branching model designed to provide a structured approach to managing branches in a Git repository. Here’s how it was implemented in this project:
+
+- Main Branches:
+
+- **master**: Represents the stable production-ready code. It only receives merges from development branche.
+- **develop**: Integration branch where ongoing development and feature integration occurs. All feature branches are merged into develop
+
+- Supporting Branches:
+
+- **Feature branches**: Created off develop for developing new features. Each feature has its own branch and is merged back into develop upon completion.
