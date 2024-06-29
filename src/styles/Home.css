@@ -3,6 +3,7 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    padding: 10px;
     height: 100vh;
     background: linear-gradient(to right, #8c3fea, #4a90e2);
     color: white;
