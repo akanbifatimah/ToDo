@@ -8,7 +8,7 @@ const TodoItem = ({ todo, toggleTodo, removeTodo }) => {
         checked={todo.completed}
         onChange={() => toggleTodo(todo.id)}
       />
-      <span>{todo.text}</span>
+      <span>{todo.title}</span>
       <button onClick={() => removeTodo(todo.id)}>Remove</button>
     </li>
   );
