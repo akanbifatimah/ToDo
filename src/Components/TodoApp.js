@@ -65,55 +65,57 @@ const TodoApp = () => {
   });
 
   return (
-    <div className="todo-app">
-      <h1>Todo List</h1>
-      <AddTodo addTodo={addTodo} />
-      {loading ? (
-        <div className="loading">
-          <Lottie animationData={Loading} loop={true} className="lottie" />
-          <p>Fetching Todo list...</p>
+   
+      <div className="todo-app">
+        <h1>Todo List</h1>
+        <AddTodo addTodo={addTodo} />
+        {loading ? (
+          <div className="loading">
+            <Lottie animationData={Loading} loop={true} className="lottie" />
+            <p>Fetching Todo list...</p>
+          </div>
+        ) : error ? (
+          <p className="error">Error: {error}</p>
+        ) : (
+          <>
+            <TodoList
+              todos={filteredTodos}
+              toggleTodo={toggleTodo}
+              removeTodo={removeTodo}
+            />
+            <TodoFilter filter={filter} setFilter={setFilter} />
+            {filter === "completed" ? (
+              completedCount === 0 ? (
+                <p>No tasks completed yet</p>
+              ) : pendingCount === 0 ? (
+                <p>Hurray🎉, All tasks completed!</p>
+              ) : (
+                <p>
+                  You have <span className="count">{completedCount}</span>{" "}
+                  completed tasks
+                </p>
+              )
+            ) : filter === "active" ? (
+              pendingCount === 0 ? (
+                <p>Hurray🎉, All tasks completed!</p>
+              ) : (
+                <p>
+                  You have <span className="count">{pendingCount}</span> tasks
+                  pending
+                </p>
+              )
+            ) : (
+              <p>
+                Total tasks: <span className="count">{totalCount}</span>
+              </p>
+            )}
+          </>
+        )}
+        <div>
+          <Logout />
         </div>
-      ) : error ? (
-        <p className="error">Error: {error}</p>
-      ) : (
-        <>
-          <TodoList
-            todos={filteredTodos}
-            toggleTodo={toggleTodo}
-            removeTodo={removeTodo}
-          />
-          <TodoFilter filter={filter} setFilter={setFilter} />
-          {filter === "completed" ? (
-            completedCount === 0 ? (
-              <p>No tasks completed yet</p>
-            ) : pendingCount === 0 ? (
-              <p>Hurray🎉, All tasks completed!</p>
-            ) : (
-              <p>
-                You have <span className="count">{completedCount}</span>{" "}
-                completed tasks
-              </p>
-            )
-          ) : filter === "active" ? (
-            pendingCount === 0 ? (
-              <p>Hurray🎉, All tasks completed!</p>
-            ) : (
-              <p>
-                You have <span className="count">{pendingCount}</span> tasks
-                pending
-              </p>
-            )
-          ) : (
-            <p>
-              Total tasks: <span className="count">{totalCount}</span>
-            </p>
-          )}
-        </>
-      )}
-      <div>
-        <Logout/>
       </div>
-    </div>
+    
   );
 };
 

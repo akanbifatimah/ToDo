@@ -2,7 +2,7 @@
 import React, { useState } from 'react';
 import { useAuth } from '../Context/AuthContext';
 import './../../styles/login.css'; 
-import { useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 const Login = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
@@ -12,7 +12,7 @@ const Login = () => {
     e.preventDefault();
     const dummyToken = '123456789090'; 
     login(dummyToken);
-    navigate('/');
+    navigate('/todos');
   };
   
 
@@ -44,6 +44,9 @@ const Login = () => {
         </div>
         <div className="form-group">
           <button type="submit">Login</button>
+        </div>
+        <div>
+        <Link to='/'>Home</Link>
         </div>
       </form>
     </div>
