@@ -8,8 +8,7 @@
     text-align: center;
     width: 80%;
     max-height: 80%;
-    overflow-y: scroll;
-    scrollbar-color: #8c3fea;
+    overflow-y: scroll;   
   }
   
   .todo-app h1 {
@@ -21,3 +20,19 @@
     color: #8c3fea;
 
   }
+  .lottie{
+    width: 50%;
+  }
+  .loading{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+  }
+  .error {
+    color: red;
+    font-weight: bold;
+    margin: 10px 0;
+  }
+  

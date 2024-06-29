@@ -1,0 +1,36 @@
+.about-container {
+    padding: 40px;
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+    color: #333;
+  }
+  
+  h1 {
+    margin-bottom: 20px;
+  }
+  
+  p {
+    margin-bottom: 15px;
+    line-height: 1.6;
+  }
+  
+  .back-button {
+    background: none;
+    color: #8c3fea; 
+    border: none; 
+    padding: 10px 20px; 
+    text-align: center; 
+    text-decoration: underline; 
+    display: inline-block;
+    font-size: 16px; 
+    margin: 4px 2px; 
+    cursor: pointer;
+    border-radius: 12px;
+    transition: color 0.3s ease; 
+  }
+  
+  .back-button:hover {
+    color: black;
+  }
+  

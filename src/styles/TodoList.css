@@ -8,4 +8,7 @@
   .todo-list li + li {
     margin-top: 10px;
   }
-  
+  .todo-container{
+    height: 300px;
+    overflow-y: scroll;
+  }
