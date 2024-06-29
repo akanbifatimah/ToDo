@@ -16,6 +16,7 @@
     align-items: center;
     justify-content: center;
     padding: 10px;
+    flex-direction: column;
   }
   
   .form-group label {
@@ -54,3 +55,12 @@
     color: black;
   }
   
+  @media only screen and (min-width: 600px) {
+    .form-group {
+        display: flex;
+        justify-content: center;
+        margin-top: 20px;
+        flex-direction: row;
+        gap: 5px;
+      }
+  }
