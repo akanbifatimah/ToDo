@@ -5,6 +5,7 @@ import TodoFilter from "./TodoFilter";
 import "./../styles/TodoApp.css";
 import Loading from "./../Images/LoadingState.json";
 import Lottie from "lottie-react";
+import Logout from "./AuthScreens/Logout";
 const TodoApp = () => {
   // Add default todo items here
   const [todos, setTodos] = useState([]);
@@ -109,6 +110,9 @@ const TodoApp = () => {
           )}
         </>
       )}
+      <div>
+        <Logout/>
+      </div>
     </div>
   );
 };
