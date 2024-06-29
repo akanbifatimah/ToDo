@@ -22,8 +22,11 @@
     display: block;
     font-weight: bold;
     margin-bottom: 5px;
+    color: #8c3fea;
   }
-  
+  h2{
+    color: #8c3fea;
+  }
   .form-group input[type="text"],
   .form-group input[type="password"] {
     width: 100%;
@@ -31,6 +34,7 @@
     border: 1px solid #ccc;
     border-radius: 3px;
     font-size: 14px;
+    outline: none;
     
   }
   
