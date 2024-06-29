@@ -55,3 +55,25 @@ Git Flow
 - Supporting Branches:
 
 - **Feature branches**: Created off develop for developing new features. Each feature has its own branch and is merged back into develop upon completion.
+
+## Running Unit Test
+To run the unit tests for the application, use the following command:
+
+      ```
+      npm test
+      ```
+
+- This will execute all test files in the project. Ensure that you have installed all dependencies using:    
+
+      npm install
+
+
+You should see the results of the tests in the terminal, including any errors or failures.      
+
+## Assumptions
+
+- During the implementation, I made the following assumptions and decisions:
+
+Dummy Token for Authentication: I used a dummy token (dummyToken = '123456789090') for authentication since no actual authentication endpoint was provided during development. This allowed me to simulate the authentication flow and test the application's behavior without relying on a real backend.
+
+-  In a production environment, the server would typically provide a JWT token for secure authentication.
