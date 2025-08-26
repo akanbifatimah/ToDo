@@ -83,7 +83,7 @@ const TodoApp = () => {
               toggleTodo={toggleTodo}
               removeTodo={removeTodo}
             />
-            <p>Click the checkbox to mark Task as completed</p>
+            {filter === "all" && <p>Click the checkbox to mark Task as completed</p>}
             <TodoFilter filter={filter} setFilter={setFilter} />
             {filter === "completed" ? (
               completedCount === 0 ? (
