@@ -23,6 +23,9 @@ npm start
 ## Running Tests
 npm test
 
+## login
+Use any valid email address format e.g example@gmail.com
+Use any value as Password e.g password
 
 <!-- task 2 -->
 
@@ -35,9 +38,9 @@ npm test
    - **Method**: Test by entering a wrong URL or disconnecting from the internet to trigger error handling.
    - **Expected Outcome**: Ensure that appropriate error messages, such as server errors or custom error messages, are displayed.
 
-3. **Todo Items**: Confirm only the first 10 todos are displayed.
+3. **Todo Items**: Confirm only the first 5 todos are displayed.
    - **Method**: Switch to the "All" tab and check the total count of tasks.
-   - **Expected Outcome**: Ensure that the count reflects only the first 10 todos fetched from the API.
+   - **Expected Outcome**: Ensure that the count reflects only the first 5 todos fetched from the API.
 
 ### Additional Notes:
 - **CSS**: Ensure that styles for error messages (`error` class) are correctly applied for visibility.
