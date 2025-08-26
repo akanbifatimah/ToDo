@@ -24,7 +24,7 @@ const TodoApp = () => {
         }
         const data = await response.json();
         console.log({ data });
-        setTodos(data.slice(0, 10)); // Limit to 10 items
+        setTodos(data.slice(0, 5)); // Limit to 5 items
         setLoading(false);
       } catch (error) {
         setError(
@@ -83,6 +83,7 @@ const TodoApp = () => {
               toggleTodo={toggleTodo}
               removeTodo={removeTodo}
             />
+            <p>Click the checkbox to mark Task as completed</p>
             <TodoFilter filter={filter} setFilter={setFilter} />
             {filter === "completed" ? (
               completedCount === 0 ? (
